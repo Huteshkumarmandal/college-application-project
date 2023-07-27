@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:background="@drawable/back1"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_avitar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:text="College Project"
+        android:textColor="@color/red"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="Application"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</LinearLayout>

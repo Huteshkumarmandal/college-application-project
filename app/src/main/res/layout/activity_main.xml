@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/error"
+            android:background="@drawable/timg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:text="LOGIN"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp" />
+
+
+
+            <View
+                android:layout_width="250dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:background="#F3EFEF" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/stylesheet"
+                android:hint="username"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:textColorHint="@color/white"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="80dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:drawableLeft="@drawable/baseline_vpn_key_24"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login"
+                android:padding="20dp"
+                android:backgroundTint="#A36719"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="120dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:id="@+id/frame"/>
+
+            <TextView
+                android:id="@+id/aboutuswithoutlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="About Us"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

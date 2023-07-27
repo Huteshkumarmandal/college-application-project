@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/back1"
+    tools:context=".Add_Photos">
+
+
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        android:hint="Enter Your Name"
+        android:id="@+id/t1"
+        android:textColor="#000"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        android:hint="Enter Your Designation"
+        android:id="@+id/t2"
+        android:textColor="#000"/>
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Browse Image"
+        android:id="@+id/browse"/>
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Upload to Server"
+        android:textColor="#FFF"
+        android:background="@color/colorprimary"
+        android:layout_marginTop="10dp"
+        android:id="@+id/upload"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

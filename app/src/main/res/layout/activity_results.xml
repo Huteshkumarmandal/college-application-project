@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/resultbackg"
+    android:layout_height="match_parent"
+    tools:context=".Results">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/error"
+            android:background="@drawable/timg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Visit Profile ?"
+                android:padding="20dp"
+                android:id="@+id/profileInstructor"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="20dp"
+                android:text="upload student results"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/regNo"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="student reg No"
+                android:textColorHint="@color/white"
+                android:padding="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/management"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="Management (marks)"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/white"
+                android:padding="20dp"
+                android:inputType="numberDecimal"
+                android:layout_marginRight="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commskilss"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="comm skills (marks)"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/politics"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="politics (marks)"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/project"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="Project Management (marks)"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/field"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/stylesheet"
+                android:hint="Field (marks)"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/white"
+                android:padding="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="semister"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="20dp"
+                    android:background="@drawable/stylesheet"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/semister"
+                    android:id="@+id/semister"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload"
+                android:padding="20dp"
+                android:backgroundTint="#FF9100"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:id="@+id/frame"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
