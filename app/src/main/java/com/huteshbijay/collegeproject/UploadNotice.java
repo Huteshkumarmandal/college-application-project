@@ -12,3 +12,6 @@ public class UploadNotice extends AppCompatActivity {
         setContentView(R.layout.activity_upload_notice);
     }
 }
+
+
+//git testing first
