@@ -54,7 +54,7 @@ public class Add_Photos extends Fragment {
     ImageView img;
     Bitmap bitmap;
     String encodeImageString;
-    private static final String url = "http://10.0.2.2/android_db_pool/fileupload.php";
+    private static final String url = "http://10.0.2.2/CollegeDataBase/fileupload.php";
 
 
     @Override

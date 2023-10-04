@@ -30,12 +30,12 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circle_red"
-                    android:padding="15dp"
-                    android:src="@drawable/ic_notice" />
+<!--                <ImageView-->
+<!--                    android:layout_width="64dp"-->
+<!--                    android:layout_height="64dp"-->
+<!--                    android:background="@drawable/circle_red"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:src="@drawable/ic_notice" />-->
 
                 <View
                     android:layout_width="match_parent"
@@ -95,7 +95,8 @@
                 android:spinnerMode="dropdown"
                 android:background="@android:drawable/btn_dropdown"
                 android:gravity="center"
-                android:layout_marginVertical="16dp"/>
+                android:layout_marginVertical="16dp"
+                android:entries="@array/department_array"/>
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -112,7 +113,8 @@
                 android:spinnerMode="dropdown"
                 android:background="@android:drawable/btn_dropdown"
                 android:gravity="center"
-                android:layout_marginVertical="16dp"/>
+                android:layout_marginVertical="16dp"
+                android:entries="@array/semister"/>
 
         </com.google.android.material.card.MaterialCardView>
 

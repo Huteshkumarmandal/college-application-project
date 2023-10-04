@@ -19,22 +19,12 @@
             android:title="PDF"/>
         <item
             android:id="@+id/Gallery"
-            android:icon="@drawable/ic_image_24"
+            android:icon="@drawable/ic_pdf_24"
             android:title="Gallery"/>
 
         <item
-            android:id="@+id/Our_Vision"
-            android:icon="@drawable/ic_verified_user_24"
-            android:title="Vision and Golas"/>
-
-        <item
-            android:id="@+id/About"
-            android:icon="@drawable/ic_verified_user_24"
-            android:title="About Us"/>
-
-        <item
             android:id="@+id/Contact"
-            android:icon="@drawable/ic_verified_user_24"
+            android:icon="@drawable/ic_pdf_24"
             android:title="Contact"/>
     </group>
 

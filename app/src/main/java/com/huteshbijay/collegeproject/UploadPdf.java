@@ -52,6 +52,8 @@ public class UploadPdf extends AppCompatActivity {
         setContentView(R.layout.activity_upload_pdf);
 
         pd = new ProgressDialog(this);
+        pd.setMessage("Uploading pdf");
+
 
         addpdf = findViewById(R.id.addpdf);
         pdfTitle = findViewById(R.id.pdfTitle);
@@ -85,11 +87,14 @@ public class UploadPdf extends AppCompatActivity {
     }
 
     private void uploadPdfData() {
+
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+
         // URL to your PHP script on the local server (change it according to your setup)
-        String url = "http://192.168.1.65/CollegeDatabase/upload_pdf.php";
+        String url = "http://10.0.2.2/CollegeDataBase/upload_pdf.php";
 
         // Create a Volley RequestQueue
-        RequestQueue queue = Volley.newRequestQueue(this);
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -126,7 +131,7 @@ public class UploadPdf extends AppCompatActivity {
                 // Pass the title and pdf data (URL) to the PHP script
                 Map<String, String> params = new HashMap<>();
                 params.put("title", title);
-                params.put("pdf_url", pdfData.toString());
+                params.put("pdf_file", pdfData.toString());
                 return params;
             }
         };

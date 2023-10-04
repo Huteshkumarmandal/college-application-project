@@ -1,10 +1,13 @@
 package com.huteshbijay.collegeproject;
 
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 
 interface InterfaceMethods {
     @FormUrlEncoded
@@ -31,8 +34,22 @@ interface InterfaceMethods {
 
 
     @FormUrlEncoded
+
     @POST("updatePassword.php")
+
     Call<ResponseFormServer> updatePasswrd(@Field("oldpassword") String oldpassword, @Field("newpassword") String newpassword, @Field("email") String email);
+
+
+    @Multipart
+    @POST("uploadNotice.php")
+    Call<ResponseFormServer> uploadNotice(@Part("title") String title,
+                              @Part("department") String department,
+                              @Part("semester") String semester,
+                              @Part("description") String description,
+                              @Part MultipartBody.Part imagepart);
+
+//    Call<Notice> uploadNotice(RequestBody titleBody, RequestBody descriptionBody, RequestBody departmentBody, RequestBody semesterBody, MultipartBody.Part imagePart);
+
 
 
 }

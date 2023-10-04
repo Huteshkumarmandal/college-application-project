@@ -14,6 +14,11 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.huteshbijay.collegeproject.Image.ImageView;
+import com.huteshbijay.collegeproject.Notice.NoticeView;
+import com.huteshbijay.collegeproject.Pdf.PdfView;
+import com.huteshbijay.collegeproject.Pdf.ViewPdf;
+
 
 public class Admin_Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -71,13 +76,28 @@ public class Admin_Dashboard extends AppCompatActivity implements NavigationView
         if (itemId == R.id.home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
         } else if (itemId == R.id.Notice) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+
+//            Intent intent = new Intent(getApplicationContext(), ViewNotice.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//            finish();
+           getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NoticeView()).commit();
         } else if (itemId == R.id.Pdf) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Add_Photos()).commit();
+
+//            Intent intent = new Intent(getApplicationContext(), ViewPdf.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//            finish();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PdfView()).commit();
         } else if (itemId == R.id.Gallery) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImageView()).commit();
         } else if (itemId == R.id.Users) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+
+            Intent intent = new Intent(getApplicationContext(), Admin.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+          //  getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Admin()).commit();
         }
 
 

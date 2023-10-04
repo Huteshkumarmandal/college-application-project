@@ -14,6 +14,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.huteshbijay.collegeproject.Image.ImageView;
+import com.huteshbijay.collegeproject.Notice.NoticeView;
+import com.huteshbijay.collegeproject.Notice.ViewNotice;
+import com.huteshbijay.collegeproject.Pdf.PdfView;
 
 public class TeacherDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -37,7 +41,9 @@ public class TeacherDashboard extends AppCompatActivity implements NavigationVie
         navigationView.setNavigationItemSelectedListener(this);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREF, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+       // SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor = sharedPreferences.edit();
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
                 R.string.close_nav);
@@ -45,7 +51,7 @@ public class TeacherDashboard extends AppCompatActivity implements NavigationVie
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TeacherHome()).commit();
             navigationView.setCheckedItem(R.id.home);
         }
     }
@@ -54,13 +60,13 @@ public class TeacherDashboard extends AppCompatActivity implements NavigationVie
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.home) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TeacherHome()).commit();
         } else if (itemId == R.id.Notice) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NoticeView()).commit();
         } else if (itemId == R.id.Pdf) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PdfView()).commit();
         } else if (itemId == R.id.Gallery) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Add_Photos()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ImageView()).commit();
         }  else if (itemId == R.id.Users) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
         }
@@ -68,8 +74,11 @@ public class TeacherDashboard extends AppCompatActivity implements NavigationVie
 
         else if (itemId == R.id.logout) {
 
-            editor.clear();
-            editor.commit();
+//            editor.clear();
+//            editor.commit();
+
+            editor.remove("email").apply();
+
 
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

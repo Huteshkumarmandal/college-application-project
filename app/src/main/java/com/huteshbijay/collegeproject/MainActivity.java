@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import retrofit2.Call;
@@ -17,26 +18,35 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    //variable declaration for input fields
-
     EditText username, password;
     Button button;
     ProgressDialog progressDialog;
-
-    //when user login, save  details in Shared Preference
     String SHARED_PREF = "myfref_xml";
 
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //now, initialize variable
-
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         button = findViewById(R.id.login);
         progressDialog = new ProgressDialog(this);
+
+        textView = findViewById(R.id.aboutuswithoutlogin); // Your TextView
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AboutUs.class);
+
+                startActivity(intent);
+
+            }
+        });
+
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //here, check whether user opens App at the second time, no login is required
@@ -51,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         if (email != null) {
             switch (role) {
                 case "student":
-                    Intent intent = new Intent(getApplicationContext(), Student.class);
+                    Intent intent = new Intent(getApplicationContext(), StudentDashboard.class);
                     startActivity(intent);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     finish();
@@ -65,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), role, Toast.LENGTH_LONG).show();
                     break;
                 case "teacher":
-                    Intent intent3 = new Intent(getApplicationContext(), Add_Cources.class);
+                    Intent intent3 = new Intent(getApplicationContext(), TeacherDashboard.class);
                     startActivity(intent3);
                     intent3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     finish();

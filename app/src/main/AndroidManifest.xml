@@ -21,6 +21,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".AddStudent.AddStudent"
+            android:exported="false" />
+        <activity
+            android:name=".Notice.AddNotice"
+            android:exported="false" />
+        <activity
+            android:name=".ViewNotice.ViewNotice"
+            android:exported="false" />
+        <activity
             android:name=".UploadNotice"
             android:exported="false" />
         <activity

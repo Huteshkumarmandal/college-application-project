@@ -16,4 +16,29 @@
 
 
 
+
+
+    Black: <color name="colorBlack">#000000</color>
+    White: <color name="colorWhite">#FFFFFF</color>
+    Red: <color name="colorRed">#FF0000</color>
+    Green: <color name="colorGreen">#008000</color>
+    Blue: <color name="colorBlue">#0000FF</color>
+    Yellow: <color name="colorYellow">#FFFF00</color>
+    Orange: <color name="colorOrange">#FFA500</color>
+    Purple: <color name="colorPurple">#800080</color>
+    Pink: <color name="colorPink">#FFC0CB</color>
+    Brown: <color name="colorBrown">#A52A2A</color>
+    Gray: <color name="colorGray">#808080</color>
+    Cyan: <color name="colorCyan">#00FFFF</color>
+    Magenta: <color name="colorMagenta">#FF00FF</color>
+    Teal: <color name="colorTeal">#008080</color>
+    Lavender: <color name="colorLavender">#E6E6FA</color>
+    Maroon: <color name="colorMaroon">#800000</color>
+    Navy: <color name="colorNavy">#000080</color>
+    Olive: <color name="colorOlive">#808000</color>
+    Silver: <color name="colorSilver">#C0C0C0</color>
+    Gold: <color name="colorGold">#FFD700</color>
+
+
+
 </resources>

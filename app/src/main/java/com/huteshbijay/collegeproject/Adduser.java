@@ -26,8 +26,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Adduser extends AppCompatActivity {
-    EditText firstName, lastName, email, role;
-    Spinner department;
+    EditText firstName, lastName, email;
+    Spinner department,role_add;
     Button button;
     TextView profile;
     LinearLayout error;
@@ -43,7 +43,7 @@ public class Adduser extends AppCompatActivity {
         lastName = findViewById(R.id.lastname_add);
         email = findViewById(R.id.email_add);
         department = findViewById(R.id.department_add);
-        role = findViewById(R.id.role_add);
+        role_add = findViewById(R.id.role_add);
         button = findViewById(R.id.add_user);
         profile = findViewById(R.id.profileAdmin);
         error = findViewById(R.id.errorMainActivity);
@@ -95,7 +95,7 @@ public class Adduser extends AppCompatActivity {
         String lastname2 = lastName.getText().toString();
         String email2 = email.getText().toString();
         String department2 = department.getSelectedItem().toString();
-        String role2 = role.getText().toString();
+        String role2 = role_add.getSelectedItem().toString();
 
         Call<ResponseFormServer> call = ConnectionDatabase.getClient().create(InterfaceMethods.class).addUsers(firstName2, lastname2, email2, department2, role2);
         call.enqueue(new Callback<ResponseFormServer>() {
@@ -131,6 +131,13 @@ public class Adduser extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
+       // super.onBackPressed(); // Call the default behavior
+
+        // Create an intent to open the Admin activity (or any other desired activity)
+        Intent intent = new Intent(getApplicationContext(), Admin_Dashboard.class);
+        startActivity(intent);
+        finish(); // Finish the current activity
+
+        //moveTaskToBack(true);
     }
 }

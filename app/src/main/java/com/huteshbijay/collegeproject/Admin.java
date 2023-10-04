@@ -71,7 +71,15 @@ public class Admin extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
+      //  super.onBackPressed(); // Call the default behavior
+
+        // Create an intent to open the Admin activity (or any other desired activity)
+        Intent intent = new Intent(getApplicationContext(), Admin_Dashboard.class);
+        startActivity(intent);
+        finish(); // Finish the current activity
+
+
+        //   moveTaskToBack(true);
     }
 
 }

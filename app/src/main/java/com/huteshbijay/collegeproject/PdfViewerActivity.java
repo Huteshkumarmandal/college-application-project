@@ -38,7 +38,7 @@ public class PdfViewerActivity extends AppCompatActivity {
         recyclerView.setAdapter(pdfAdapter);
 
         // Replace "your_php_script_url" with the URL of your PHP script that fetches PDF data from the MySQL database
-        String phpUrl = "your_php_script_url";
+        String phpUrl = "http//10.2.2/CollegeDataBase/fetchpdf.php";
         new PdfDataFetcher().execute(phpUrl);
     }
 

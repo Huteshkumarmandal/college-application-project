@@ -103,7 +103,7 @@ public class UploadImage extends AppCompatActivity {
         byte[] finalImg = baos.toByteArray();
 
         // URL to your PHP script on the local server (change it according to your setup)
-        String url = "http://192.168.1.65/CollegeDatabase/UploadGallery.php";
+        String url = "http://10.0.2.2/CollegeDataBase/UploadGallery.php";
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {

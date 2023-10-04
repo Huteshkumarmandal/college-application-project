@@ -70,26 +70,54 @@
                 android:layout_marginLeft="20dp"
                 android:textColor="@color/white"
                 android:background="@drawable/stylesheet"
-                android:hint="Registration Numbe or Email"
+                android:hint="Registration-Email"
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/white"
                 android:padding="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"/>
-            <EditText
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/role_add"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:background="@drawable/stylesheet"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:drawableLeft="@drawable/role"-->
+<!--                android:hint="Role (admin,student,teacher)"-->
+<!--                android:inputType="textEmailAddress"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                android:padding="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginTop="8dp"/>-->
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/role_add"
+                android:background="@color/white"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/stylesheet"
-                android:textColor="@color/white"
-                android:drawableLeft="@drawable/role"
-                android:hint="Role (admin,student,teacher)"
-                android:inputType="textEmailAddress"
-                android:textColorHint="@color/white"
-                android:padding="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:drawableLeft="@drawable/department"
+                    android:text="department"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="20dp"
+                    android:background="@drawable/stylesheet"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/role_array"
+                    android:id="@+id/role_add"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -19,6 +19,13 @@
 
     </array>
 
+    <array name="role_array">
+        <item>choose</item>
+        <item>admin</item>
+        <item>student</item>
+        <item>teacher</item>
+    </array>
+
 
     <array name="Semesters">
         <item>choose</item>
